@@ -8,11 +8,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "makefile": "^0.0.2"
-  },
-  "dependencies": {
-    "make": "^0.0.0"
-  }
+  "license": "ISC"
 }
