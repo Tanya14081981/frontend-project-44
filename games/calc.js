@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import greetGamer from './cli.js';
+import greetGamer from '../src/cli.js';
 
 import getRandomInt from '../function/getRandomInt.js';
 
