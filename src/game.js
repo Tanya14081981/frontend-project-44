@@ -1,14 +1,11 @@
 import readlineSync from 'readline-sync';
 
-import greetGamer from './cli.js';
-
-import getName from './getName.js';
-
 const isEvenNum = (number) => number % 2 === 0;
 
 const startGame = () => {
-  const userName = getName();
-  greetGamer(userName);
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = Math.floor(Math.random() * 100);
