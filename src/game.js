@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 
-import greetGamer, { getName } from './cli.js';
+import greetGamer from './cli.js';
+
+import getName from './getName.js';
 
 const isEvenNum = (number) => number % 2 === 0;
 
