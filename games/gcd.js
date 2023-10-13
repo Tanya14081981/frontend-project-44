@@ -4,35 +4,29 @@ import greetGamer from '../src/cli.js';
 
 import getRandomInt from '../function/getRandomInt.js';
 
-const isRightAnswer = (numberOne, numberTwo, operator) => {
-  let result;
-  switch (operator) {
-    case '+':
-      result = numberOne + numberTwo;
-      break;
-    case '-':
-      result = numberOne - numberTwo;
-      break;
-    case '*':
-      result = numberOne * numberTwo;
-      break;
-    default:
-      console.log('error');
-  }
-  return result;
+const getMaxDevidor = (numberOne, numberTwo) => {
+  let maxDevidor = 0;
+  let value1 = numberOne;
+  let value2 = numberTwo;
+  for (let i = 1; i <= numberOne; i += 1) {
+    if (value1 === value2) {
+      maxDevidor = value1;
+    } else if (value1 > value2) {
+      value1 -= value2;
+    } else if (value2 > value1) {
+      value2 -= value1;
+    }
+  } return maxDevidor;
 };
-
-const calcGame = () => {
+const maxGeneralDivider = () => {
   const userName = greetGamer();
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     const numberOne = getRandomInt(100);
     const numberTwo = getRandomInt(100);
-    const operators = ['+', '-', '*'];
-    const operator = operators[getRandomInt(3)];
-    const expression = `${numberOne} ${operator} ${numberTwo}`;
+    const expression = `${numberOne} ${numberTwo}`;
     console.log('Question: ', expression);
-    const answerCorrect = isRightAnswer(numberOne, numberTwo, operator);
+    const answerCorrect = getMaxDevidor(numberOne, numberTwo);
     const answerUser = readlineSync.question('Your answer: ');
     if (answerUser !== answerCorrect.toString()) {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
@@ -43,4 +37,4 @@ const calcGame = () => {
   }
   console.log('Congratulations,', userName, '!');
 };
-export default calcGame;
+export default maxGeneralDivider;
