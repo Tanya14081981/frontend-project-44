@@ -5,10 +5,11 @@ import greetGamer from '../src/cli.js';
 import getRandomInt from '../function/getRandomInt.js';
 
 const getMaxDevidor = (numberOne, numberTwo) => {
-  let maxDevidor = 0;
+  const maxNum = Math.max(numberOne, numberTwo);
+  let maxDevidor = 1;
   let value1 = numberOne;
   let value2 = numberTwo;
-  for (let i = 1; i <= numberOne; i += 1) {
+  for (let i = 1; i <= maxNum; i += 1) {
     if (value1 === value2) {
       maxDevidor = value1;
     } else if (value1 > value2) {

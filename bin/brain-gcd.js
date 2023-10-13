@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import maxGeneralDivider from '../games/calc.js';
+import maxGeneralDivider from '../games/gcd.js';
 
 maxGeneralDivider();
