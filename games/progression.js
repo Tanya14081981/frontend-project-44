@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync';
-
-import greetGamer from '../src/cli.js';
+import game from '../index.js';
 
 import getRandomInt, { getRandomArbitrary } from '../function/getRandomInt.js';
 
@@ -22,19 +20,12 @@ const getArray = () => {
 };
 
 const progression = () => {
-  const userName = greetGamer();
-  console.log('What number is missing in the progression?');
-  for (let i = 0; i < 3; i += 1) {
-    const [expression, answer] = getArray();
-    console.log('Question: ', expression.join(' '));
-    const answerUser = readlineSync.question('Your answer: ');
-    if (answerUser !== answer.toString()) {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answer}'.`);
-      console.log("Let's try again, ", userName);
-      return;
-    }
-    console.log('Correct!');
-  }
-  console.log('Congratulations,', userName, '!');
+  const [expression, answerCorrect] = getArray();
+  const question = expression.join(' ');
+  return [question, answerCorrect];
 };
-export default progression;
+const getProgression = () => {
+  const condition = ('What number is missing in the progression?');
+  game(progression, condition);
+};
+export default getProgression;

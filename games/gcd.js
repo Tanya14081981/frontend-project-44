@@ -1,6 +1,4 @@
-import readlineSync from 'readline-sync';
-
-import greetGamer from '../src/cli.js';
+import game from '../index.js';
 
 import getRandomInt from '../function/getRandomInt.js';
 
@@ -19,23 +17,15 @@ const getMaxDevidor = (numberOne, numberTwo) => {
     }
   } return maxDevidor;
 };
-const maxGeneralDivider = () => {
-  const userName = greetGamer();
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i < 3; i += 1) {
-    const numberOne = getRandomInt(100);
-    const numberTwo = getRandomInt(100);
-    const expression = `${numberOne} ${numberTwo}`;
-    console.log('Question: ', expression);
-    const answerCorrect = getMaxDevidor(numberOne, numberTwo);
-    const answerUser = readlineSync.question('Your answer: ');
-    if (answerUser !== answerCorrect.toString()) {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
-      console.log("Let's try again, ", userName);
-      return;
-    }
-    console.log('Correct!');
-  }
-  console.log('Congratulations,', userName, '!');
+const playMaxGeneralDivider = () => {
+  const numberOne = getRandomInt(100);
+  const numberTwo = getRandomInt(100);
+  const question = `${numberOne} ${numberTwo}`;
+  const answerCorrect = getMaxDevidor(numberOne, numberTwo);
+  return [question, answerCorrect];
 };
-export default maxGeneralDivider;
+const isMaxGeneralDivider = () => {
+  const condition = ('Find the greatest common divisor of given numbers.');
+  game(playMaxGeneralDivider, condition);
+};
+export default isMaxGeneralDivider;
