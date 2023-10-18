@@ -13,7 +13,7 @@ const game = (partGame, condition) => {
       console.log('Correct!');
     } else {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
-      console.log("Let's try again, ", userName);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
