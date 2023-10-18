@@ -7,7 +7,7 @@ const game = (partGame, condition) => {
   console.log(condition);
   for (let i = 0; i < 3; i += 1) {
     const [question, answerCorrect] = partGame();
-    console.log('Question: ', question);
+    console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
     if (answerUser === String(answerCorrect)) {
       console.log('Correct!');
@@ -17,7 +17,7 @@ const game = (partGame, condition) => {
       return;
     }
   }
-  console.log('Congratulations,', userName, '!');
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default game;
