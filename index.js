@@ -12,8 +12,7 @@ const game = (partGame, condition) => {
     if (answerUser === String(answerCorrect)) {
       console.log('Correct!');
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'.`);
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'.\nLet's try again, ${userName}!`);
       return;
     }
   }
