@@ -1,6 +1,6 @@
 import game from '../index.js';
 
-import getRandomInt from '../function/getRandomInt.js';
+import getRandomInt from '../utils.js';
 
 const isRightAnswer = (numberOne, numberTwo, operator) => {
   let result;
@@ -29,8 +29,8 @@ const playCalc = () => {
   const answerCorrect = isRightAnswer(numberOne, numberTwo, operator);
   return [question, answerCorrect];
 };
-const calcGame = () => {
+const runGameCalc = () => {
   const condition = ('What is the result of the expression?');
   game(playCalc, condition);
 };
-export default calcGame;
+export default runGameCalc;

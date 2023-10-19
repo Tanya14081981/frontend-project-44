@@ -1,6 +1,6 @@
 import game from '../index.js';
 
-import getRandomInt, { getRandomArbitrary } from '../function/getRandomInt.js';
+import getRandomInt, { getRandomArbitrary } from '../utils.js';
 
 const getArray = () => {
   const a = 5;
@@ -24,8 +24,8 @@ const progression = () => {
   const question = expression.join(' ');
   return [question, answerCorrect];
 };
-const getProgression = () => {
+const runGameProgression = () => {
   const condition = ('What number is missing in the progression?');
   game(progression, condition);
 };
-export default getProgression;
+export default runGameProgression;

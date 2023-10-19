@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import greetGamer from './src/cli.js';
+import greetGamer from './cli.js';
 
 const game = (partGame, condition) => {
   const userName = greetGamer();

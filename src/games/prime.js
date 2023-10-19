@@ -1,4 +1,4 @@
-import getRandomInt from '../function/getRandomInt.js';
+import getRandomInt from '../utils.js';
 
 import game from '../index.js';
 
@@ -21,8 +21,8 @@ const playPrime = () => {
   return [question, answerCorrect];
 };
 
-const isItPrime = () => {
+const runGameIsItPrime = () => {
   const condition = ('Answer "yes" if given number is prime. Otherwise answer "no".');
   game(playPrime, condition);
 };
-export default isItPrime;
+export default runGameIsItPrime;
