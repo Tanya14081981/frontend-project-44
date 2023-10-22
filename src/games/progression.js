@@ -1,19 +1,19 @@
 import game from '../index.js';
 
-import getRandomInt, { getRandomArbitrary } from '../utils.js';
+import getRandomANumber from '../utils.js';
 
 const getArray = () => {
   const a = 5;
   const b = 10;
-  const lengthArray = getRandomArbitrary(a, b);
+  const lengthArray = getRandomANumber(a, b);
   const array = [];
-  const startNum = getRandomInt(100);
+  const startNum = getRandomANumber(0, 100);
   const step = Math.ceil(Math.random() * 10);
   for (let i = 0; i < lengthArray; i += 1) {
     const current = startNum + step * i;
     array.push(current);
   }
-  const indexMissing = getRandomInt(lengthArray);
+  const indexMissing = getRandomANumber(0, lengthArray);
   const missingElement = array[indexMissing];
   array.splice(indexMissing, 1, '..');
   return [array, missingElement];
@@ -24,8 +24,8 @@ const progression = () => {
   const question = expression.join(' ');
   return [question, answerCorrect];
 };
-const runGameProgression = () => {
+const runProgressionGame = () => {
   const condition = ('What number is missing in the progression?');
   game(progression, condition);
 };
-export default runGameProgression;
+export default runProgressionGame;

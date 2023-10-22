@@ -1,8 +1,8 @@
 import game from '../index.js';
 
-import getRandomInt from '../utils.js';
+import getRandomANumber from '../utils.js';
 
-const isRightAnswer = (numberOne, numberTwo, operator) => {
+const rightAnswer = (numberOne, numberTwo, operator) => {
   let result;
   switch (operator) {
     case '+':
@@ -15,22 +15,22 @@ const isRightAnswer = (numberOne, numberTwo, operator) => {
       result = numberOne * numberTwo;
       break;
     default:
-      console.log('error');
+      throw new Error('Unknown state!');
   }
   return result;
 };
 
 const playCalc = () => {
-  const numberOne = getRandomInt(100);
-  const numberTwo = getRandomInt(100);
+  const numberOne = getRandomANumber(0, 100);
+  const numberTwo = getRandomANumber(0, 100);
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomInt(3)];
+  const operator = operators[getRandomANumber(0, 3)];
   const question = `${numberOne} ${operator} ${numberTwo}`;
-  const answerCorrect = isRightAnswer(numberOne, numberTwo, operator);
+  const answerCorrect = rightAnswer(numberOne, numberTwo, operator);
   return [question, answerCorrect];
 };
-const runGameCalc = () => {
+const runCalcGame = () => {
   const condition = ('What is the result of the expression?');
   game(playCalc, condition);
 };
-export default runGameCalc;
+export default runCalcGame;

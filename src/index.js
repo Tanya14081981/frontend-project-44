@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-import greetGamer from './cli.js';
-
-const game = (partGame, condition) => {
-  const userName = greetGamer();
+const game = (playGame, condition) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   console.log(condition);
   for (let i = 0; i < 3; i += 1) {
-    const [question, answerCorrect] = partGame();
+    const [question, answerCorrect] = playGame();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
     if (answerUser === String(answerCorrect)) {

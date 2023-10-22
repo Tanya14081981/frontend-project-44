@@ -1,6 +1,6 @@
 import game from '../index.js';
 
-import getRandomInt from '../utils.js';
+import getRandomANumber from '../utils.js';
 
 const getMaxDevidor = (numberOne, numberTwo) => {
   const maxNum = Math.max(numberOne, numberTwo);
@@ -18,14 +18,14 @@ const getMaxDevidor = (numberOne, numberTwo) => {
   } return maxDevidor;
 };
 const playMaxGeneralDivider = () => {
-  const numberOne = getRandomInt(100);
-  const numberTwo = getRandomInt(100);
+  const numberOne = getRandomANumber(0, 100);
+  const numberTwo = getRandomANumber(0, 100);
   const question = `${numberOne} ${numberTwo}`;
   const answerCorrect = getMaxDevidor(numberOne, numberTwo);
   return [question, answerCorrect];
 };
-const findMaxGeneralDivider = () => {
+const runGcdGame = () => {
   const condition = ('Find the greatest common divisor of given numbers.');
   game(playMaxGeneralDivider, condition);
 };
-export default findMaxGeneralDivider;
+export default runGcdGame;
