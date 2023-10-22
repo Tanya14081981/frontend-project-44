@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "Mind games - a set of five arithmetic games",
   "bin": {
-    "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
