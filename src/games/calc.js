@@ -26,7 +26,7 @@ const playCalc = () => {
   const operators = ['+', '-', '*'];
   const operator = operators[getRandomANumber(0, 3)];
   const question = `${numberOne} ${operator} ${numberTwo}`;
-  const answerCorrect = rightAnswer(numberOne, numberTwo, operator);
+  const answerCorrect = String(rightAnswer(numberOne, numberTwo, operator));
   return [question, answerCorrect];
 };
 const runCalcGame = () => {

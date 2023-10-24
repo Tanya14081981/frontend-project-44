@@ -9,7 +9,7 @@ const game = (playGame, condition) => {
     const [question, answerCorrect] = playGame();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
-    if (answerUser === String(answerCorrect)) {
+    if (answerUser === answerCorrect) {
       console.log('Correct!');
     } else {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'.\nLet's try again, ${userName}!`);

@@ -2,26 +2,26 @@ import game from '../index.js';
 
 import getRandomANumber from '../utils.js';
 
-const getArray = () => {
-  const a = 5;
-  const b = 10;
-  const lengthArray = getRandomANumber(a, b);
+const getArray = (step, firstEl, countEl) => {
   const array = [];
-  const startNum = getRandomANumber(0, 100);
-  const step = Math.ceil(Math.random() * 10);
-  for (let i = 0; i < lengthArray; i += 1) {
-    const current = startNum + step * i;
+  for (let i = 0; i < countEl; i += 1) {
+    const current = firstEl + step * i;
     array.push(current);
   }
-  const indexMissing = getRandomANumber(0, lengthArray);
-  const missingElement = array[indexMissing];
-  array.splice(indexMissing, 1, '..');
-  return [array, missingElement];
+  return array;
 };
 
 const progression = () => {
-  const [expression, answerCorrect] = getArray();
-  const question = expression.join(' ');
+  const step = Math.ceil(Math.random() * 10);
+  const countEl = getRandomANumber(5, 10);
+  const firstEl = getRandomANumber(0, 100);
+  const array = getArray(step, firstEl, countEl);
+
+  const indexMissing = getRandomANumber(0, countEl);
+  const missingElement = array[indexMissing];
+  array.splice(indexMissing, 1, '..');
+  const answerCorrect = String(missingElement);
+  const question = array.join(' ');
   return [question, answerCorrect];
 };
 const runProgressionGame = () => {

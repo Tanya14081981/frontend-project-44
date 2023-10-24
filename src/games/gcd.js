@@ -21,7 +21,7 @@ const playMaxGeneralDivider = () => {
   const numberOne = getRandomANumber(0, 100);
   const numberTwo = getRandomANumber(0, 100);
   const question = `${numberOne} ${numberTwo}`;
-  const answerCorrect = getMaxDevidor(numberOne, numberTwo);
+  const answerCorrect = String(getMaxDevidor(numberOne, numberTwo));
   return [question, answerCorrect];
 };
 const runGcdGame = () => {
