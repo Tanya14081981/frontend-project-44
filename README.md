@@ -12,7 +12,7 @@ npm link
 При ответе правильно три раза подряд игрок выигрывает. При неправильном ответе игра заканчивается поражением игрока. 
 
 ### brain-even:
-[![asciicast](https://asciinema.org/a/0L0A28FC8HejaCVPaXKhrQE7O.svg)](https://asciinema.org/a/0L0A28FC8HejaCVPaXKhrQE7O)
+[![asciicast](https://asciinema.org/a/xgyaaEe7fDwLHuaa5fDD6Elx3.svg)](https://asciinema.org/a/xgyaaEe7fDwLHuaa5fDD6Elx3)
 
 ### brain-calc:
 [![asciicast](https://asciinema.org/a/jgTjLo0zHYyF1N7qtO9dPXbzb.svg)](https://asciinema.org/a/jgTjLo0zHYyF1N7qtO9dPXbzb)
