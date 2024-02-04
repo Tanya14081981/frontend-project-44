@@ -8,20 +8,20 @@
 ```
 git clone
 make install
-npm link
+sudo npm link
 ```
 
 ### brain-even:
 [![asciicast](https://asciinema.org/a/xgyaaEe7fDwLHuaa5fDD6Elx3.svg)](https://asciinema.org/a/xgyaaEe7fDwLHuaa5fDD6Elx3)
 
 ### brain-calc:
-[![asciicast](https://asciinema.org/a/jgTjLo0zHYyF1N7qtO9dPXbzb.svg)](https://asciinema.org/a/jgTjLo0zHYyF1N7qtO9dPXbzb)
+[![asciicast](https://asciinema.org/a/L50YXzhnh3jBbYu39S101Z6Da.svg)](https://asciinema.org/a/L50YXzhnh3jBbYu39S101Z6Da)
 
 ### brain-gsd:
-[![asciicast](https://asciinema.org/a/mpTzdBf1R8vZ3GiGtKcWmyd1P.svg)](https://asciinema.org/a/mpTzdBf1R8vZ3GiGtKcWmyd1P)
+[![asciicast](https://asciinema.org/a/oLJEB3Wp4qoKb2mbWFkWNsgOV.svg)](https://asciinema.org/a/oLJEB3Wp4qoKb2mbWFkWNsgOV)
 
 ### brain-progression:
-[![asciicast](https://asciinema.org/a/ZevqduSsfjfJzudHOKuuuhed7.svg)](https://asciinema.org/a/ZevqduSsfjfJzudHOKuuuhed7)
+[![asciicast](https://asciinema.org/a/9dMal7oZuDgmycxMWyVApzUi4.svg)](https://asciinema.org/a/9dMal7oZuDgmycxMWyVApzUi4)
 
 ### brain-prime:
-[![asciicast](https://asciinema.org/a/Mjn7eL96WNPDHIullQYPX4ZSr.svg)](https://asciinema.org/a/Mjn7eL96WNPDHIullQYPX4ZSr)
+[![asciicast](https://asciinema.org/a/wyZKwa9xcxe04H42HruoTPYds.svg)](https://asciinema.org/a/wyZKwa9xcxe04H42HruoTPYds)
