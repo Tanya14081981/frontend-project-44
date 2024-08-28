@@ -16,7 +16,7 @@ const game = (playGame, condition) => {
       return;
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations Guy, ${userName}!`);
 };
 
 export default game;
